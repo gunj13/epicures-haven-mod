@@ -1,0 +1,241 @@
+body{
+  border: 2px solid brown;
+  overflow-x: hidden;
+}
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 99999;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: center;
+  color: black;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #bd651351;
+  color: black;
+  font-size: large;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #bd6513;
+  color: white;
+}
+.hamburger {
+  display: none; /* Hide the hamburger on larger screens */
+  background: #bd6513;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+}
+
+.hamburger i {
+  color: white;
+}
+/* Mobile Navigation Bar Styles */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); /* Move the mobile nav closer to the hamburger button */
+}
+
+.mobile-link {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.mobile-link:hover {
+  background-color: #bd651351;
+  color: black;
+  font-size: large;
+}
+
+/* Show mobile navigation when the hamburger is clicked */
+.show-mobile-nav {
+  display: block !important;
+}
+
+video:focus {
+  outline: none;
+}
+
+body {
+  text-align: center;
+  background-color: #f0d396;
+  font-family:"Times New Roman",sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  padding: 0;
+}
+
+h4 {
+  display: inline-block;
+}
+pre {
+  font-family: Cinzel Decorative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.block {
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+}
+.image-block {
+  background-color: #ffcb8f;
+
+}
+.content-block {
+  background-color: #e0904d;
+  font-family: 'Times New Roman', sans-serif;
+  padding: 10px;
+}
+
+#location {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.n1 {
+  width:400px;
+  height:560px;
+}
+.n2 {
+  width:700px;
+  height:400px;
+  display: block;
+  margin: auto;
+}
+  
+
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title h4 {
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 60px;
+  margin-top: 75px;
+  margin-bottom: 0px;
+}
+
+.n1 {
+  height:500px;
+  margin:auto
+}
+.n2 {
+  height:500px;
+  margin:auto;
+}
+ 
+footer {
+  background-color: #bd6513;
+  padding: 2px;
+  color: black;
+  text-align: center;
+}
+
+
+/* Mobile Devices */
+@media screen and (max-width: 767px) {
+  .topnav a {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  
+  body {
+    display: block;
+    font-size: 16px; /* Adjust font size for mobile */
+    padding: 10px; /* Add padding for better readability */
+  }
+  
+  .container {
+    width: 100%; /* Full width for mobile */
+  }
+  
+  .block {
+    width: 100%; /* Full width for mobile */
+  }
+  
+  .topnav {
+    font-size: 18px; /* Adjust font size for mobile */
+    justify-content: center;
+  }
+  
+  .topnav a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+  
+  #location {
+    position: relative;
+    right: 40px;
+    bottom: 40px;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+  .n1 {
+    height:120px;
+  }
+  .n2 {
+    height:120px;
+    
+  }
+
+  footer {
+    padding: 2px; /* Adjust padding for mobile */
+  }
+}
+

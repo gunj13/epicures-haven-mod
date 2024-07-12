@@ -1,0 +1,497 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  border: 2px solid brown;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 99999;
+}
+
+.topnav a {
+  float: center;
+  color: black;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.topnav a:hover {
+  background-color: #bd651351;
+  color: black;
+  font-size: large;
+}
+
+.topnav a.active {
+  background-color: #bd6513;
+  color: white;
+}
+
+.hamburger {
+  display: none; /* Hide the hamburger on larger screens */
+  background: #bd6513;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+}
+
+.hamburger i {
+  color: white;
+}
+/* Mobile Navigation Bar Styles */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); /* Move the mobile nav closer to the hamburger button */
+}
+
+.mobile-link {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.mobile-link:hover {
+  background-color: #bd651351;
+  color: black;
+  font-size: large;
+}
+
+/* Show mobile navigation when the hamburger is clicked */
+.show-mobile-nav {
+  display: block !important;
+}
+
+#mylinks{
+  display: none;
+}
+
+/* Style the active link (or home/logo) */
+
+#video {
+  border: solid 1px #f0d396;
+}
+
+body {
+  text-align: center;
+  background-color: #f0d396;
+}
+
+h4 {
+  display: inline-block;
+}
+pre {
+  font-family: Cinzel Decorative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#location {
+  font-family: cinzel decorative;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 50px;
+  margin-left: 50px;
+  position: relative;
+  top: 37px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.gallery-container {
+  
+  justify-content: center; /* Horizontally center the items */
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden; /* Hide any content that overflows the container */
+}
+  
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  animation: fade 1.5s ease-in-out;
+  
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Show the first slide by default */
+.mySlides:first-child {
+  display: block;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.mySlides img {
+  height: 400px; /* Set the height for all images */
+  width: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.page {
+width: 35%;
+font-size: large;
+position: relative;
+top: 35px;
+left: 240px;
+
+
+}
+
+.timings {
+  font-size: large;
+  position: relative;
+  right: 60px;
+  bottom: 40px;
+}
+.timings h3{
+  position: relative;
+  top: 30px;
+  right: 20px;
+}
+
+#button1 {
+  padding: 5px;
+  height: 50px;
+  width: 120px;
+  font-size: 17px;
+  text-decoration: none;
+  background-color: #2f6b04;
+  color: WHITE;
+  font-family: "Times New Roman";
+}
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  overflow: hidden; /* Hide any content that overflows */
+}
+.Testimonial-content {
+  background-color: white;
+  display: inline-block;
+  width: 250px;
+  height: auto;
+  padding: 20px;
+  margin: 0 20px; /* Add some horizontal spacing between testimonial blocks */
+  text-align: center;
+}
+
+
+.map {
+  float: right;
+  margin-top: -310px;
+  margin-right: -650px;
+}
+
+.foot {
+  background-color: #bb610c8e;
+  color: black;
+  text-align: left;
+  font-size: 20px;
+  padding: 0px;
+}
+
+#scrollpic {
+  position:relative;
+  background-image: url('entrance-name1.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width:100%;
+  height:100vh;
+  justify-content: center;
+  color:white;
+}
+
+
+
+#contact-section {
+  width: 60%;
+  position: relative;
+  left: 150px;
+  color: white;
+  
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity here */
+  pointer-events: none; /* Allows clicks to pass through the overlay to the content */
+}
+
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-map {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section h3,
+.contact-section p,
+.contact-section a {
+  position: relative;
+  z-index: 1; /* Ensure the text is above the overlay */
+}
+
+footer {
+  background-color: #8c4401;
+  padding: 8px;
+}
+@media (max-width: 768px) {
+  /* Styles for mobile screens */
+  /* Style the navigation menu */
+  .topnav a{
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+
+  .show-mobile-nav {
+  display: block !important;
+  }
+
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: block;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #8c4401;
+    color: black;
+  }
+    
+  /* Adjust logo size and position */
+  #video {
+    height: 250px;
+  }
+
+  pre {
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: -5px;
+  }
+
+  /* Adjust image sizes */
+  .mySlides img {
+    height: auto;
+  }
+
+  /* Adjust page and timings sections */
+  .page{
+    margin-left: 0px;
+    width: 80%;
+    display: block;
+    position: relative;
+    left: 35px;
+    top: 0px;
+    bottom: 300px;
+    margin-top: 0;
+  }
+  .timings {
+    left: 4px;
+    top: 5px;
+    width: 100%;
+    height: auto;
+    margin: -5px;
+  }
+  .yy{
+    position: relative;
+    right: 20px;
+    bottom: 50px;
+  }
+  #location {
+ 
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+    right: 30px;
+    top: 0px;
+    bottom: 100px;
+  }
+  /* Testimonial section */
+  .testimonial {
+    padding: 20px;
+  }
+
+  .Testimonial-content {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  /* Contact section */
+  #contact-section {
+    width: 100%;
+    left: 0px;
+    padding: 20px;
+  }
+
+  .contact-content{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .map {
+    float: none; /* Reset float property */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 90%; /* Restrict the width for phone view */
+    height: 200px; /* Set a fixed height */
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Footer */
+  .foot {
+    padding: 20px;
+  }
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 769px) {
+  /* Styles for laptop and larger screens */
+  
+
+ 
+  .hamburger{
+    display: none;
+  }
+
+  .topnav #mylinks{
+    display: none;
+  }
+  /* Adjust logo size and position */
+  #video {
+    height: 250px;
+  }
+
+  pre {
+    font-size: 15px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  /* Adjust image sizes */
+  .mySlides img {
+    height: 400px;
+  }
+
+  /* Adjust page and timings sections */
+  
+
+  /* Testimonial section */
+  .testimonial {
+    padding: 50px 0;
+  }
+  
+  .timings {
+    margin-right: 0;
+    display:inline-block;
+    margin-right: -800px;
+    margin-top: -800px;
+    padding: 8px; 
+    width:600px; 
+    height:auto;
+  }
+
+  .Testimonial-content {
+    width: 250px;
+    height: 400px;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Contact section */
+  #contact-section {
+    padding: 50px;
+  }
+
+ 
+  .contact-content,
+  .contact-map {
+    width: 50%;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Footer */
+  .foot {
+    padding: 8px;
+  }
+}

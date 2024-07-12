@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epicure's Haven - About Us</title>
+  
+    <link rel="stylesheet" href="about_styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .topnav {
+        font-family: 'Cinzel Decorative';
+        font-size: 22px;
+        font-weight: bold;
+        }
+    
+    body {
+        font-family:"Times New Roman",sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .block {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+    .image-block {
+        background-color: #ffcb8f;
+    
+    }
+    .content-block {
+        background-color: #e0904d;
+        font-family: 'Times New Roman', sans-serif;
+        display: inline;
+        text-align: center;
+    }
+    .image {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+    }
+  
+</style>
+<script src="index.js"></script>
+</head>
+<header>
+    <inline> <video id="video" src="circle_logo.mp4" height="250" autoplay loop alt="logo"></video>
+    <pre><h1>Epicure's Haven</h1>
+      <h4>Indulge in the Art of Culinary Bliss</h4></pre>
+    <pre id="location">Epicure's Haven
+           #45, Church Street, Ashok Nagar
+    Bangalore 560087</pre>
+  </inline>
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <i class="fa fa-bars"></i>
+  </div>
+  
+  <div class="topnav child" id="myLinks" >
+    <a href="index.html">Home</a>
+    <a class="active" href="#home">Our Story</a>
+    <a href="menu.html">Menu</a>
+    <a href="index.html#contact-section">Contact Us</a>
+    <a href="index.html">Reserve a Table</a>
+  </div>
+  <!-- Mobile Navigation Bar -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="mobile-link">Home</a>
+    <a href="about.html" class="mobile-link">Our Story</a>
+    <a href="menu.html" class="mobile-link">Menu</a>
+    <a href="index.html#contact-section" class="mobile-link">Contact Us</a>
+    <a href="reserve.html" class="mobile-link">Reserve a Table</a>
+  </div>
+
+</div>
+</header>
+<body>
+  <div class="container">
+    <div class="block image-block ">
+      <video class="n1" src="animation_lldweby4.mp4" autoplay loop alt="logo"></video>
+    </div>
+    
+    <div class="block content-block">
+      <h2>OUR STORY</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat libero nec nunc feugiat, sed posuere mi volutpat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit facilis, doloribus perspiciatis, corporis suscipit veniam quia ab repellat beatae autem a laudantium. Ipsum cumque sapiente illo nemo accusantium eaque error.</p>
+    </div>
+    
+    <div class="block content-block">
+      <h2>Our Mission</h2>
+      <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro modi quo ratione omnis natus ea mollitia accusamus rerum quisquam voluptate. Quidem deserunt similique explicabo recusandae animi, obcaecati dolores aperiam corporis?</p>
+    </div>
+    <div class="block image-block ">
+      <video class="n1" src="phone.mp4" autoplay loop alt="logo"></video>
+    </div>
+    <div class="block image-block">
+      <img class="n2" src="team.jpg" >
+      
+    </div>
+    <div class="block content-block">
+      <h2>Meet the Team</h2>
+      <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+    </div>
+  </div>
+  <footer>
+    Website Powered by TEAM-7 ✨
+    Copyright@Team-7
+    All Rights Reserved.
+  </footer>
+
+  
+</body>
+<script>
+  // Function to check viewport width and hide mobile nav if needed
+  function checkViewportWidth() {
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 768) {
+      hideMobileNav();
+    }
+  }
+
+  // Add event listener for window resize
+  window.addEventListener("resize", checkViewportWidth);
+
+  // Initial check on page load
+  checkViewportWidth();
+</script>
+</html>

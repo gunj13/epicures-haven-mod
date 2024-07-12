@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epicure's Haven/Reserve A Table</title>
+    <link rel="stylesheet" href="reservestyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel Decorative"
+      rel="stylesheet"
+    />
+    <style>
+      .topnav {
+        font-family: "Cinzel Decorative";
+        font-size: 22px;
+        font-weight: bold;
+      }
+    </style>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <inline>
+        <video
+          id="video"
+          src="circle_logo.mp4"
+          height="250"
+          autoplay
+          loop
+          alt="logo"
+        ></video>
+        <pre id="location"><h1>Epicure's Haven</h1>
+          <h4>Indulge in the Art of Culinary Bliss</h4></pre>
+        <pre id="location">
+Epicure's Haven
+               #45, Church Street, Ashok Nagar
+        Bangalore 560087</pre
+        >
+      </inline>
+
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <i class="fa fa-bars"></i>
+      </div>
+      
+      <div class="topnav child" id="myLinks" >
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a>
+        <a href="menu.html">Menu</a>
+        <a href="index.html#contact-section">Contact Us</a>
+        <a class="active" href="#home">Reserve a Table</a>
+      </div>
+      <!-- Mobile Navigation Bar -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">Our Story</a>
+        <a href="menu.html" class="mobile-link">Menu</a>
+        <a href="index.html#contact-section" class="mobile-link">Contact Us</a>
+        <a href="reserve.html" class="mobile-link">Reserve a Table</a>
+      </div>
+  
+    
+  </header>
+  
+
+    <body>
+      <section class="banner">
+        <div class="section-title">
+          <h4>Reserve a table</h4>
+        </div>
+        <div class="card-container">
+          <div class="card-img"></div>
+
+          <div class="card-content">
+            <h3>Reservation</h3>
+            <form id="reservation-form">
+              <div class="form-row">
+                <input type="date" name="reservationDate" placeholder="Date"/>
+                <select name="hours">
+                  <option value="hour-select">Select Hour</option>
+                  <option value="10">10: 00</option>
+                  <option value="11">11: 00</option>
+                  <option value="12">12: 00</option>
+                  <option value="13">13: 00</option>
+                  <option value="14">14: 00</option>
+                  <option value="15">15: 00</option>
+                  <option value="16">16: 00</option>
+                  <option value="17">17: 00</option>
+                  <option value="18">18: 00</option>
+                  <option value="19">19: 00</option>
+                  <option value="20">20: 00</option>
+                  <option value="21">21: 00</option>
+                  <option value="22">22: 00</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <input type="text" name="fullName" placeholder="Full Name" />
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  placeholder="Phone Number"
+                />
+              </div>
+
+              <div class="form-row">
+                <input
+                  type="number"
+                  name="persons"
+                  placeholder="How Many Persons?"
+                  min="1"
+                />
+                <input type="submit" value="BOOK TABLE" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        const reservationForm = document.getElementById("reservation-form");
+
+        reservationForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const fullName = reservationForm.elements.fullName.value;
+          const phoneNumber = reservationForm.elements.phoneNumber.value;
+          const persons = reservationForm.elements.persons.value;
+          const reservationDate = reservationForm.elements.reservationDate.value;
+
+          if (fullName && phoneNumber && persons && reservationDate) {
+      if (/^\d{10}$/.test(phoneNumber)) {
+        alert(
+          `Table reserved for ${persons} persons.\nName: ${fullName}\nPhone: ${phoneNumber}\nDate: ${reservationDate}`
+        );
+        reservationForm.reset();
+      } else {
+        alert("Phone number must be exactly 10 digits.");
+      }
+    } else {
+      alert("Please fill in all the required fields.");
+    }
+  });
+      </script>
+      <footer>
+        <section class="foot">
+          Website Powered by TEAM-7 ✨ Copyright@Team-7 All Rights Reserved.
+        </section>
+      </footer>
+    </body>
+  
+  <script>
+    // Function to check viewport width and hide mobile nav if needed
+    function checkViewportWidth() {
+      var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+      if (viewportWidth > 768) {
+        hideMobileNav();
+      }
+    }
+  
+    // Add event listener for window resize
+    window.addEventListener("resize", checkViewportWidth);
+  
+    // Initial check on page load
+    checkViewportWidth();
+  </script>
+</html>
